@@ -1,3 +1,101 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: white;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 100px;
+  text-align: left;
+  text-align: center;
+}
+h2 {
+  font-size: 50px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+nav a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #dddddd;
+}
+header {
+  height: 400px;
+  padding: 0 50px;
+  grid-column: 1 / -1;
+  grid-row: 2 / span 1;
+}
+footer {
+  grid-column: 1 / -1;
+  grid-row: 5 / span 1;
+}
+footer ul {
+  list-style-type: none;
+  text-align: center;
+}
+footer li {
+  display: inline-block;
+  padding: 20px 10px;
+}
+.skip a{
+  background-color: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  text-decoration: none;
+  color: black;
+}
+.skip a:focus {
+  top: 0;
+}
+:focus {
+  padding: 5px;
+  border: 2px solid black;
+}
+.container {
+  display: grid;
+  grid-template-rows: 40px 400px auto auto 70px;
+  grid-template-columns: 100px auto auto 100px;
+  grid-row-gap: 15px;
+  width: 100vw;
+}
+.nav {
+  text-align: left;
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+}
+.code {
+  text-align: center;
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+.design {
+  text-align: center;
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+.resume {
+  text-align: center;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+.contacts {
+  text-align: center;
+  grid-column: 3 / span 1;
+  grid-row: 4 / span 1;
 }
