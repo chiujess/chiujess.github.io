@@ -68,6 +68,33 @@ footer li {
   display: inline-block;
   padding: 20px 10px;
 }
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+#submit {
+  text-align: right;
+}
+#message {
+  height: 200px;
+}
 .skip a{
   background-color: white;
   left: 0;
@@ -165,6 +192,31 @@ footer li {
 .red-link:hover {
   color: #EE502E;
 }
+.orange-link {
+  text-decoration: none;
+  color: #F9A841;
+}
+.orange-link:hover {
+  color: #D47A08;
+}
+.contact-form {
+  display: grid;
+  grid-template-columns: 5% 1fr 2fr 5%;
+  grid-template-rows: 40px 550px 1fr 100px;
+}
+#contact-info {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+#form-content {
+  grid-column: 3 / span 1;
+  grid-row: 3 / span 1;
+}
+#form-title {
+  text-align: left;
+  padding-left: 0px;
+  padding-bottom: 40px;
+}
 #first {
   grid-column: 1 / span 1;
   grid-row: 1 / span 1;
@@ -230,6 +282,7 @@ footer li {
   footer {
     grid-column: 1 / -1;
     grid-row: 5 / span 1;
+    padding: 50px;
   }
   .tabs {
     width: 100%;
