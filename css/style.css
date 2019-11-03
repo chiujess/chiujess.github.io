@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100vw;
-  /* background-color: #181818; */
+  /* background-color: #272727; */
 }
 img {
   max-width: 100%;
@@ -21,15 +21,22 @@ h2, h3 {
 }
 p {
   padding: 10px;
+  line-height: 1.1;
 }
 h1 {
   font-size: 70px;
   text-align: center;
   margin: 0 auto;
-  color: black;
+  color: white;
 }
 h2 {
   font-size: 40px;
+}
+nav {
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 nav ul {
   list-style-type: none;
@@ -42,19 +49,29 @@ nav li {
   padding-bottom: 5px;
 }
 nav a {
-  color: black;
+  color: #272727;
   font-weight: bold;
   text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
 }
-nav a:hover {
-  color: #dddddd;
+nav a:hover, .active {
+  color: white;
+  background-color: #272727;
 }
 header {
   height: 100%;
   grid-column: 1 / -1;
   grid-row: 2 / span 1;
-  display: flex;
+  vertical-align: middle;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
+  background-image: url("../images/stars.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 footer {
   grid-column: 1 / -1;
@@ -79,7 +96,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #EA7C64;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -87,10 +104,7 @@ input[type=submit] {
   cursor: pointer;
 }
 input[type=submit]:hover {
-  background-color: #45a049;
-}
-#submit {
-  text-align: right;
+  background-color: #EE502E;
 }
 #message {
   height: 200px;
@@ -117,9 +131,9 @@ input[type=submit]:hover {
   display: grid;
   grid-template-rows: 40px 400px auto auto auto auto 70px;
   grid-template-columns: 50px auto 50px;
-  grid-row-gap: 15px;
-  grid-column-gap: 15px;
+  grid-gap: 20px;
   max-width: 100vw;
+  align-items: center;
 }
 .photos {
   display: -ms-flexbox; /* IE10 */
@@ -147,8 +161,7 @@ input[type=submit]:hover {
   display: grid;
   grid-template-rows: 40px 550px 1fr 70px;
   grid-template-columns: 5% auto auto 5%;
-  grid-row-gap: 15px;
-  grid-column-gap: 15px;
+  grid-gap: 20px;
   max-width: 100vw;
 }
 .nav {
@@ -156,31 +169,11 @@ input[type=submit]:hover {
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
 }
-.code {
-  text-align: center;
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-}
-.design {
-  text-align: center;
-  grid-column: 2 / span 1;
-  grid-row: 4 / span 1;
-}
-.resume {
-  text-align: center;
-  grid-column: 2 / span 1;
-  grid-row: 5 / span 1;
-}
-.contacts {
-  text-align: center;
-  grid-column: 2 / span 1;
-  grid-row: 6 / span 1;
-}
 .projects {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-gap: 20px;
 
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
@@ -197,25 +190,74 @@ input[type=submit]:hover {
   color: #F9A841;
 }
 .orange-link:hover {
-  color: #D47A08;
+  color: #FA8C00;
+}
+.green-link {
+  text-decoration: none;
+  color: #AFE066;
+}
+.green-link:hover {
+  color: #7FD500;
+}
+.blue-link {
+  text-decoration: none;
+  color: #5CBAE6;
+}
+.blue-link:hover {
+  color: #0099E2;
+}
+.purple-link {
+  text-decoration: none;
+  color: #A55BE2;
+}
+.purple-link:hover {
+  color: #7B04DE;
+}
+.black-link {
+  text-decoration: none;
+  color: #252525;
+  transition: .5s ease;
+}
+.black-link:hover {
+  color: #7B7B7B;
 }
 .contact-form {
   display: grid;
-  grid-template-columns: 5% 1fr 2fr 5%;
+  grid-gap: 20px;
+  grid-template-columns: 5% 1fr 5%;
   grid-template-rows: 40px 550px 1fr 100px;
+}
+.parallax {
+  background-image: url("../images/stars.gif");
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #contact-info {
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
+  /* align-self: center; */
 }
 #form-content {
-  grid-column: 3 / span 1;
-  grid-row: 3 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
 }
 #form-title {
   text-align: left;
   padding-left: 0px;
   padding-bottom: 40px;
+}
+#contact-footer {
+  grid-column: 1 / -1;
+  grid-row: 4 / span 1;
+}
+#submit {
+  text-align: center;
 }
 #first {
   grid-column: 1 / span 1;
@@ -248,12 +290,12 @@ input[type=submit]:hover {
 @media screen and (min-width: 900px) {
   .container {
     grid-template-columns: 5% auto auto 5%;
-    grid-template-rows: 60px 550px 1fr 1fr 100px;
+    grid-template-rows: 60px 500px 1fr 1fr 100px;
     max-width: 100vw;
   }
   .gallery {
     grid-template-columns: 5% auto auto 5%;
-    grid-template-rows: 60px 550px 1fr 100px;
+    grid-template-rows: 60px 500px 1fr 100px;
     max-width: 100vw;
   }
   .nav {
@@ -264,7 +306,7 @@ input[type=submit]:hover {
   }
   .photos {
     grid-column: 2 / span 2;
-    grid-row: 3 / span 1;
+    grid-row: 3 / span 2;
   }
   .column {
     -ms-flex: 25%; /* IE10 */
@@ -278,47 +320,36 @@ input[type=submit]:hover {
   header {
     grid-column: 1 / -1;
     grid-row: 2 / span 1;
+    margin-bottom: 20px;
   }
   footer {
     grid-column: 1 / -1;
     grid-row: 5 / span 1;
     padding: 50px;
   }
-  .tabs {
-    width: 100%;
-  }
-  .code {
-    grid-column: 2 / span 1;
-    grid-row: 3 / span 1;
-  }
-  .design {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
-  }
-  .resume {
-    grid-column: 2 / span 1;
-    grid-row: 4 / span 1;
-  }
-  .contacts {
-    grid-column: 3 / span 1;
-    grid-row: 4 / span 1;
-  }
   .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     grid-gap: 15px;
+    width: 80%;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
 
     grid-column: 2 / span 2;
     grid-row: 3 / span 1;
   }
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 14px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     position: relative;
+    /* margin: 30px; */
+    overflow: scroll;
+    border-radius: 10px;
   }
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 22px 0 rgba(0,0,0,0.2);
   }
   .overlay {
     position: absolute;
@@ -330,10 +361,11 @@ input[type=submit]:hover {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: white;
+    background: rgba(255, 255, 255, 0);
   }
   .card:hover .overlay {
-    opacity: 0.9;
+    opacity: 100%;
+    background: rgba(255, 255, 255, 0.9);
   }
   .info {
     color: black;
@@ -349,6 +381,27 @@ input[type=submit]:hover {
   }
   .info p {
     padding: 10px;
+  }
+  .contact-form {
+    grid-template-columns: 5% 1fr 2fr 5%;
+    grid-template-rows: 60px 500px 1fr 100px;
+  }
+  #contact-info {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
+    align-self: center;
+  }
+  #form-content {
+    grid-column: 3 / span 1;
+    grid-row: 3 / span 1;
+  }
+  #form-title {
+    text-align: left;
+    padding-left: 0px;
+    padding-bottom: 40px;
+  }
+  #submit {
+    text-align: right;
   }
   #first {
     grid-column: 1 / span 1;
