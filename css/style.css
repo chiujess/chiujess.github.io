@@ -72,6 +72,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background: #272727;
 }
 footer {
   grid-column: 1 / -1;
@@ -194,7 +195,7 @@ input[type=submit]:hover {
 .parallax {
   background-image: url("../images/stars.gif");
   /* Set a specific height */
-  min-height: 500px;
+  min-height: 300px;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
