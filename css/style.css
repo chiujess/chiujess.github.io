@@ -17,7 +17,7 @@ img {
 h2, h3 {
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 p {
   padding: 10px;
@@ -45,7 +45,7 @@ nav ul {
 }
 nav li {
   display: inline-block;
-  padding: 20px;
+  padding: 5px;
   padding-bottom: 5px;
 }
 nav a {
@@ -96,7 +96,7 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 input[type=submit] {
-  background-color: #EA7C64;
+  background-color: #272727;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -104,7 +104,7 @@ input[type=submit] {
   cursor: pointer;
 }
 input[type=submit]:hover {
-  background-color: #EE502E;
+  background-color: #DBB62D;
 }
 #message {
   height: 200px;
@@ -178,54 +178,18 @@ input[type=submit]:hover {
   grid-column: 2 / span 2;
   grid-row: 3 / span 1;
 }
-.red-link {
+.yellow-link {
   text-decoration: none;
-  color: #EA7C64;
+  color: #DBB62D;
 }
-.red-link:hover {
-  color: #EE502E;
-}
-.orange-link {
-  text-decoration: none;
-  color: #F9A841;
-}
-.orange-link:hover {
-  color: #FA8C00;
-}
-.green-link {
-  text-decoration: none;
-  color: #AFE066;
-}
-.green-link:hover {
-  color: #7FD500;
-}
-.blue-link {
-  text-decoration: none;
-  color: #5CBAE6;
-}
-.blue-link:hover {
-  color: #0099E2;
-}
-.purple-link {
-  text-decoration: none;
-  color: #A55BE2;
-}
-.purple-link:hover {
-  color: #7B04DE;
-}
-.black-link {
-  text-decoration: none;
-  color: #252525;
-  transition: .5s ease;
-}
-.black-link:hover {
-  color: #7B7B7B;
+.yellow-link:hover {
+  color: #FFC900;
 }
 .contact-form {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 40px 550px 1fr 100px;
+  grid-template-rows: 40px 550px 1fr 2fr 100px;
 }
 .parallax {
   background-image: url("../images/stars.gif");
@@ -241,7 +205,10 @@ input[type=submit]:hover {
 #contact-info {
   grid-column: 2 / span 1;
   grid-row: 3 / span 1;
-  /* align-self: center; */
+  margin-top: 40px;
+}
+#contact-info p {
+  margin-bottom: 15px;
 }
 #form-content {
   grid-column: 2 / span 1;
@@ -251,10 +218,11 @@ input[type=submit]:hover {
   text-align: left;
   padding-left: 0px;
   padding-bottom: 40px;
+  padding-top: 40px;
 }
 #contact-footer {
   grid-column: 1 / -1;
-  grid-row: 4 / span 1;
+  grid-row: 5 / span 1;
 }
 #submit {
   text-align: center;
@@ -285,6 +253,11 @@ input[type=submit]:hover {
     flex: 33.333%;
     max-width: 100%;
     padding: 0 4px;
+  }
+  nav li {
+    display: inline-block;
+    padding: 10px;
+    padding-bottom: 5px;
   }
 }
 @media screen and (min-width: 900px) {
@@ -326,6 +299,11 @@ input[type=submit]:hover {
     grid-column: 1 / -1;
     grid-row: 5 / span 1;
     padding: 50px;
+  }
+  nav li {
+    display: inline-block;
+    padding: 20px;
+    padding-bottom: 5px;
   }
   .projects {
     display: grid;
