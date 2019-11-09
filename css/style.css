@@ -68,7 +68,6 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   align-items: center;
-  background-image: url("../images/stars.gif");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -224,7 +223,7 @@ input[type=submit]:hover {
 #contact-info p {
   margin-bottom: 15px;
 }
-#form-content {
+.form-content {
   grid-column: 2 / span 1;
   grid-row: 4 / span 1;
   background-color: #272727;
@@ -449,7 +448,7 @@ input[type=submit]:hover {
     margin-right: 20px;
     color: #FFFFFF;
   }
-  #form-content {
+  .form-content {
     grid-column: 3 / span 1;
     grid-row: 3 / span 1;
   }
@@ -490,7 +489,9 @@ input[type=submit]:hover {
   html{
       scroll-behavior: auto; /* Removes scroll animation */
   }
-
+  .parallax {
+    background-image: url(../images/stars.png);
+  }
   .skip a{
     background: white;
     left: 0;
