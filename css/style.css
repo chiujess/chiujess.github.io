@@ -188,7 +188,15 @@ input[type=submit]:hover {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 5% 1fr 5%;
-  grid-template-rows: 40px 550px 1fr 2fr 100px;
+  grid-template-rows: 40px 550px 1fr 100px;
+}
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr;
+
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
 }
 .parallax {
   background-image: url("../images/stars.gif");
@@ -209,23 +217,22 @@ input[type=submit]:hover {
   margin-top: 20px;
 }
 #contact-info {
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
   margin-top: 40px;
   align-self: center;
   background-color: #272727;
   border-radius: 10px;
-  padding: 20px;
-  padding-top: 30px;
-  margin-right: 20px;
+  padding: 30px;
+  margin: 20px;
   color: #FFFFFF;
 }
 #contact-info p {
   margin-bottom: 15px;
 }
 .form-content {
-  grid-column: 2 / span 1;
-  grid-row: 4 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
   background-color: #272727;
   color: white;
   padding: 20px;
@@ -450,24 +457,23 @@ input[type=submit]:hover {
     padding: 10px;
   }
   .contact-form {
-    grid-template-columns: 5% 1fr 2fr 5%;
+    grid-template-columns: 5% 1fr 5%;
     grid-template-rows: 60px 500px 1fr 100px;
   }
-  #contact-info {
+  .form {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    margin-top: 40px;
-    align-self: center;
-    background-color: #272727;
-    border-radius: 10px;
-    padding: 20px;
-    padding-top: 30px;
-    margin-right: 20px;
-    color: #FFFFFF;
+  }
+  #contact-info {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
   }
   .form-content {
-    grid-column: 3 / span 1;
-    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
   }
   #form-title {
     text-align: left;
